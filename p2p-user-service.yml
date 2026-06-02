@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3308/p2p_user_db
+    url: jdbc:mysql://localhost:3310/p2p_user_db
     username: root
     password: 123456
 
