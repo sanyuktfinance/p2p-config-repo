@@ -1,15 +1,16 @@
 spring:
   cloud:
     gateway:
-      routes:
+      server:
+        webflux:
+          routes:
 
-        - id: auth-service
-          uri: lb://P2P-AUTH-SERVICE
-          predicates:
-            - Path=/api/v1/auth/**
+            - id: auth-service
+              uri: lb://P2P-AUTH-SERVICE
+              predicates:
+                - Path=/api/v1/auth/**
 
-        - id: user-service
-          uri: lb://P2P-USER-SERVICE
-          predicates:
-            - Path=/api/v1/users/**
-            
+            - id: user-service
+              uri: lb://P2P-USER-SERVICE
+              predicates:
+                - Path=/api/v1/users/**
