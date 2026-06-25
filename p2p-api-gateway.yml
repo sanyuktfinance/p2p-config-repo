@@ -14,3 +14,8 @@ spring:
               uri: lb://P2P-USER-SERVICE
               predicates:
                 - Path=/api/v1/users/**
+
+             - id: loan-service
+              uri: lb://P2P-LOAN-SERVICE
+              predicates:
+                - Path=/api/v1/loan/**   
