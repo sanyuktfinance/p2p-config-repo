@@ -4,7 +4,6 @@ spring:
       server:
         webflux:
           routes:
-
             - id: auth-service
               uri: lb://P2P-AUTH-SERVICE
               predicates:
@@ -15,7 +14,7 @@ spring:
               predicates:
                 - Path=/api/v1/users/**
 
-             - id: loan-service
+            - id: loan-service
               uri: lb://P2P-LOAN-SERVICE
               predicates:
-                - Path=/api/v1/loan/**   
+                - Path=/api/v1/loan/**
